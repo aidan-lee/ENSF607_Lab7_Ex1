@@ -13,10 +13,10 @@ public class Server {
     // Socket used to connect to the client
     private ServerSocket serverSocket;
 
-    // Socket used to print to the client's console
+    // Used to print to the client's console
     private PrintWriter socketOut;
 
-    // Socket used to read what the client has entered on their console
+    // Used to read what the client has entered on their console
     private BufferedReader socketIn;
 
     /**
@@ -98,8 +98,7 @@ public class Server {
             System.out.println("Connection accepted by the server!");
             server.socketIn = new BufferedReader (new InputStreamReader(server.socket.getInputStream()));
             server.socketOut = new PrintWriter (server.socket.getOutputStream(), true);
-
-
+            
             server.communicate();
 
             // Closing connection
